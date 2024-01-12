@@ -69,6 +69,8 @@ Sturcture of PL/SQl
 		END;
 		/
 		
+		variables coding
+		================
 		
 		declare
 		v_name varchar2(20);
@@ -77,3 +79,33 @@ Sturcture of PL/SQl
 		dbms_output.put_line('welcome to my website');
 		end;
 		/
+		
+		
+		
+		
+		
+		declare
+		v_name number;
+				
+		begin
+		select stud_id into v_name from student where stud_id = 1;
+		dbms_output.put_line('welcome to my website');
+		end;
+		/
+		
+		
+		
+		Setting default/constant value in variables
+		===========================================
+				*Assignment OPERATOR => :=
+									=>	default 
+									
+									
+									
+		declare
+		v_salary number := 20000;
+		v_salary_1 number default 25000;
+		
+		begin
+		dbms_output.put_line(v_salary_1 ||',' || v_salary);
+		end;
